@@ -1,0 +1,130 @@
+.hero {
+  .flex-display;
+  .flex-direction(column);
+  .justify-content(center);
+  height: 100vh;
+  padding-top: 195px;
+  text-align: center;
+  color: #fff;
+  background-image: url("../img/hero_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+  h1 {
+    font-family: "Playfair Display";
+    font-size: 140px;
+  }
+  p {
+    margin-top: 25px;
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .btn-block {
+    width: 33%;
+    min-width: 200px;
+    max-width: 450px;
+    margin: 90px auto 0;
+    border-top: 1px solid #da7074;
+    .btn {
+      position: relative;
+      top: -23px;
+    }
+
+  }
+  .stripes {
+    position: relative;
+    width: 6px;
+    height:20%;
+    max-height: 190px;
+    margin: 0 auto;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 1px;
+      background: #da7074;
+    }
+    &:after {
+      right: 0;
+      top: 20px;
+    }
+  }
+  .scroll-down {
+    display: block;
+    .flex-shrink(0);
+    .flex-display;
+    .justify-content(flex-start);
+    .align-items(center);
+    width: 82px;
+    height: 82px;
+    margin: 45px auto 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    &:hover .triangle {
+      margin-top: 10px;
+      margin-left: -18px;
+      transform: rotate(90deg);
+    }
+    .triangle {
+      position: relative;
+      left: 50%;
+      display: block;
+      width: 34px;
+      height: 34px;
+      margin-left: -13px;
+      border-left: 2px solid #fff;
+      transition: all .2s ease-out;
+      box-sizing: border-box;
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 34px;
+        height: 2px;
+        background: #fff;
+        border-radius: 5px;
+      }
+      &:before {
+        transform: rotate(30deg);
+        top: 8px;
+        left: -3px;
+      }
+      &:after {
+        bottom: 8px;
+        transform: rotate(-30deg);
+        left: -3px;
+      }
+    }
+  }
+
+  @media @l-size {
+    h1 {
+      font-size: 64px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+
+  @media @s-size {
+    h1 {
+      font-size: 36px;
+    }
+    p {
+      margin-top: 15px;
+      font-size: 12px;
+    }
+    .btn-block {
+      margin: 40px auto 0;
+    }
+    .stripes {
+      height: 7%;
+    }
+  }
+}

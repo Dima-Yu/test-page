@@ -1,0 +1,39 @@
+@import "_reset";
+@import "_mixins";
+
+@import "_header";
+@import "_hero";
+@import "_gallery";
+@import "_footer";
+@import "_popup";
+
+
+/* General */
+
+body {
+  font-size: 14px;
+  font-family: Arial, Helvetica, Sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 163px;
+  height: 46px;
+  color: #fff;
+  font-family: "Montserrat";
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 46px;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: #da7074;
+  border-radius: 25px;
+  transition: background .3s ease;
+  &:hover {
+    background-color: lighten(#da7074, 10%);
+  }
+}

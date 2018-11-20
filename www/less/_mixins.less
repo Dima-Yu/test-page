@@ -1,0 +1,50 @@
+@xs-size: ~'only screen and (max-width: 360px)';
+@s-size: ~'only screen and (max-width: 480px)';
+@m-size: ~'only screen and (max-width: 680px)';
+@l-size: ~'only screen and (max-width: 768px)';
+@xl-size: ~'only screen and (max-width: 984px)';
+
+
+.flex-display(@display: flex) {
+	display: ~"-webkit-@{display}";
+	display: ~"-ms-@{display}box";
+	display: ~"-ms-@{display}";
+	display: @display;
+}
+
+.flex-direction(@direction: row) {
+  -webkit-flex-direction: @direction;
+      -ms-flex-direction: @direction;
+          flex-direction: @direction;
+}
+
+.flex-wrap(@wrap: wrap) {
+  -webkit-flex-wrap: @wrap;
+      -ms-flex-wrap: @wrap;
+          flex-wrap: @wrap;
+}
+
+.align-items(@position: flex-start) {
+  -webkit-box-align: @position;
+     -ms-flex-align: @position;
+        align-items: @position;
+}
+
+.justify-content(@justify: flex-start) {
+  -webkit-justify-content: @justify;
+      -ms-justify-content: @justify;
+          justify-content: @justify;
+}
+
+.flex-shrink(@shrink: 1) {
+  -webkit-flex-shrink: @shrink;
+      -ms-flex-shrink: @shrink;
+          flex-shrink: @shrink;
+}
+
+
+.scale(@scale: scale(1)) {
+  -webkit-transform: @scale;
+      -ms-transform: @scale;
+          transform: @scale;
+}
